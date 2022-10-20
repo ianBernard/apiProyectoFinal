@@ -1,0 +1,54 @@
+@api=http://localhost:4000/usuarios
+@api2=http://localhost:4000/recetas
+@api3=http://localhost:4000/rutinas
+GET {{api}}
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+    "usuario":"pepito",
+    "contraseña":"rodriguez"
+}
+###
+GET {{api}}/3
+
+###
+DELETE {{api}}/2
+
+###
+GET {{api2}}
+###
+POST {{api2}}
+Content-Type: application/json
+
+{
+    "NombreReceta":"papas al horno",
+    "upvotes":0,
+    "downvotes":0,
+    "visitas":0,
+    "descripcios":"papas al horno, ricos y faciles de hacer"
+}
+###
+GET {{api2}}/1
+###
+DELETE {{api2}}/2
+###
+GET {{api3}}
+###
+POST {{api3}}
+Content-Type: application/json
+
+{
+    "IdUsuario":"1",
+    "Nombre":"press de banca",
+    "Descripcion":"descripcion de press de banca",
+    "MusculosEjercitados":"pecho",
+    "Upvotes":0,
+    "Downvotes":0,
+    "Visitas":0
+}
+###
+GET {{api3}}/1
+###
+DELETE {{api3}}/1
